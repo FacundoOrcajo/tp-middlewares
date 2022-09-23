@@ -1,0 +1,34 @@
+<%- include('./partials/head') %> 
+<body>
+	<%- include('./partials/header') %> 
+    <div class="conteiner">
+        <div class="row">
+            <div class="col-6 mx-auto">
+                <div class="card shadow">
+                    <button></button>
+                    <div class="card-body">
+                        <video autoplay loop width="100%" src="videos/ec435fc3a8276bb20eca6a72d89efe7b.gif"></video>
+                    </div>
+                    <a href="/">Volver al home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+	<%- include('./partials/footer') %> 
+    <script>
+        document.getElementById('btn-muted').addEventListener('click', function(e){
+            this.classList.toggle('btn-outline-dark');
+            let video = document.querySelector('video')
+            if(video.muted){
+                video.muted = false
+            }else{
+                video.muted = true
+            }
+        })
+
+    </script>
+
+
+
+</body>
+</html>
